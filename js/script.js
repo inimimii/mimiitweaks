@@ -1,12 +1,11 @@
-console.log("Origin Realms Clone Loaded");
+const toggleBtn = document.getElementById('menu-toggle');
+const closeBtn = document.getElementById('menu-close');
+const menu = document.getElementById('mobile-menu');
 
-function switchCreator(index) {
-  const cards = document.querySelectorAll('.creator-card');
-  cards.forEach((card, i) => {
-    if (i === index) {
-      card.classList.add('active');
-    } else {
-      card.classList.remove('active');
-    }
-  });
-}
+toggleBtn.addEventListener('click', () => {
+  menu.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', () => {
+  menu.classList.add('hidden');
+});
