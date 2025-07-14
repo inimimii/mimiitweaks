@@ -4,82 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Origin Realms Clone</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <nav>
-      <img src="assets/logo.png" alt="Logo" class="logo" />
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="guide.html">Guide</a></li>
-        <li><a href="store.html">Store</a></li>
-      </ul>
+<body class="bg-[#0c0c0c] text-white font-sans">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-6 py-4 bg-[#0f0f0f] border-b border-gray-700">
+    <div class="text-xl font-bold">Origin Realms</div>
+    <nav class="hidden md:flex gap-6 text-sm font-semibold items-center">
+      <a href="index.html" class="hover:text-orange-400">HOME</a>
+      <a href="blog.html" class="hover:text-orange-400">BLOG</a>
+      <a href="guides.html" class="hover:text-orange-400">GUIDES</a>
+      <a href="store.html" class="hover:text-orange-400">STORE</a>
+      <a href="#" class="bg-[#5865F2] px-4 py-2 rounded text-white font-bold flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord" class="w-4 h-4">Discord
+      </a>
+      <span class="bg-yellow-400 text-black px-4 py-2 rounded font-bold">PLAY.ORIGINREALMS.COM</span>
     </nav>
+    <button id="menu-toggle" class="text-3xl md:hidden">&#9776;</button>
   </header>
 
-  <section class="hero">
-    <h1>Explore a New Minecraft Experience</h1>
-    <p>Join Origin Realms and discover a whole new world.</p>
-    <a href="#" class="btn">Play Now</a>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[#0c0c0c] z-50 flex flex-col p-6 space-y-4">
+    <button id="menu-close" class="text-3xl absolute top-4 right-6">&times;</button>
+    <a href="index.html" class="font-bold">HOME</a>
+    <a href="blog.html" class="font-bold">BLOG</a>
+    <a href="guides.html" class="font-bold">GUIDES</a>
+    <a href="store.html" class="font-bold">STORE</a>
+    <a href="#" class="bg-[#5865F2] px-4 py-2 rounded text-white font-bold flex items-center gap-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="w-4 h-4">Discord
+    </a>
+    <span class="bg-yellow-400 text-black px-4 py-2 rounded font-bold">PLAY.ORIGINREALMS.COM</span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="text-center px-6 py-20 bg-cover bg-center" style="background-image: url('https://media.originrealms.com/assets/website/images/home/screenshots/screenshot-3.jpg');">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Discover a New World</h1>
+    <p class="text-lg text-gray-300 mb-6">The ultimate Minecraft survival experience.</p>
+    <a href="store.html" class="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded text-white font-semibold">Play Now</a>
   </section>
 
-  <section class="intro">
-    <h2>What is Origin Realms?</h2>
-    <p>Origin Realms is a Minecraft experience like no other. Discover custom biomes, unique mobs, and an ever-expanding universe tailored for adventurers like you.</p>
-  </section>
-
-  <section class="latest-blog">
-    <h2>Latest Blog Post</h2>
-    <div class="blog-card">
-      <h3>Update 1.20 is Here!</h3>
-      <p>Explore the newest features added in the latest patch, including new items, improved performance, and exciting mechanics.</p>
-      <a href="blog.html" class="btn small">View All Blogs</a>
-    </div>
-  </section>
-
-  <section class="creators">
-    <h2>Meet the Creators</h2>
-    <div class="creator-carousel">
-      <div class="creator-card active">
-        <img src="assets/creator1.jpg" alt="Creator 1" />
-        <h3>Alex</h3>
-        <p>Lead Developer & World Builder</p>
-      </div>
-      <div class="creator-card">
-        <img src="assets/creator2.jpg" alt="Creator 2" />
-        <h3>Sophia</h3>
-        <p>Game Designer</p>
-      </div>
-      <div class="creator-card">
-        <img src="assets/creator3.jpg" alt="Creator 3" />
-        <h3>Liam</h3>
-        <p>Community Manager</p>
-      </div>
-    </div>
-    <div class="creator-nav">
-      <button onclick="switchCreator(0)">◀</button>
-      <button onclick="switchCreator(1)">●</button>
-      <button onclick="switchCreator(2)">▶</button>
-    </div>
-  </section>
-
-  <section class="discord-promo">
-    <h2>Join our Discord</h2>
-    <p>Stay up to date and connect with the community on our official Discord server.</p>
-    <a href="#" class="btn">Join Discord</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Origin Realms Fan Clone. All rights reserved.</p>
-    <ul class="footer-links">
-      <li><a href="#">Terms of Service</a></li>
-      <li><a href="#">Privacy Policy</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <!-- Footer -->
+  <footer class="text-center py-6 text-gray-400 text-sm border-t border-gray-700 mt-10">
+    &copy; 2025 Origin Realms Clone. All rights reserved.
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
